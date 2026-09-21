@@ -1,14 +1,22 @@
-document.getElementById("contact-form")?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const btn = form.querySelector('[type="submit"]');
-  if (btn) {
-    btn.classList.add("is-loading");
-    btn.disabled = true;
+(function () {
+  const mount = document.getElementById("contact-123");
+  const pending = document.getElementById("contact-form-pending");
+  const formId = String(window.FORM123?.contactFormId || "").trim();
+
+  if (!mount) return;
+
+  if (!formId) {
+    if (pending) pending.hidden = false;
+    return;
   }
-  window.setTimeout(() => {
-    form.hidden = true;
-    const thanks = document.getElementById("contact-thanks");
-    if (thanks) thanks.hidden = false;
-  }, 700);
-});
+
+  if (pending) pending.hidden = true;
+
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.defer = true;
+  script.src = `https://form.123formbuilder.com/embed/${formId}.js`;
+  script.dataset.role = "form";
+  script.dataset.defaultWidth = "100%";
+  mount.appendChild(script);
+})();
