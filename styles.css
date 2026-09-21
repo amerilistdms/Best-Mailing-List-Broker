@@ -229,15 +229,12 @@ body::before {
 }
 .brand:hover { opacity: 0.92; color: #fff; }
 .brand-logo {
-  height: 34px;
+  height: 32px;
   width: auto;
-  max-width: min(148px, 42vw);
+  max-width: min(160px, 44vw);
   flex: none;
   display: block;
-  background: #fff;
-  border-radius: 6px;
-  padding: 4px 8px;
-  box-sizing: content-box;
+  object-fit: contain;
 }
 .brand-word { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-word strong { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; white-space: nowrap; }
@@ -1339,9 +1336,10 @@ body::before {
 }
 .footer-logo {
   display: block;
-  height: 22px;
+  height: 24px;
   width: auto;
-  max-width: 120px;
+  max-width: 140px;
+  object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .footer-sitemap {
