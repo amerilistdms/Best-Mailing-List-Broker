@@ -1,0 +1,12 @@
+{
+  "name": "Best Mailing List Broker",
+  "short_name": "BMLB",
+  "description": "Targeted mailing lists, marketing lists, and audience research powered by AmeriList.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#12344d",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

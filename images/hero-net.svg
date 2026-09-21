@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" fill="none">
+  <g stroke="rgba(255,255,255,0.28)" stroke-width="1.2">
+    <path d="M80 90L210 160L340 110L470 200L610 140L760 220"/>
+    <path d="M120 260L250 310L390 250L520 340L680 280L820 360"/>
+    <path d="M60 430L200 470L330 410L480 500L640 430L790 510"/>
+    <path d="M210 160L250 310L330 410"/>
+    <path d="M340 110L390 250L480 500"/>
+    <path d="M470 200L520 340L640 430"/>
+    <path d="M610 140L680 280L790 510"/>
+    <path d="M160 80L250 310L200 470"/>
+    <path d="M760 220L820 360L790 510"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="80" cy="90" r="3.2"/><circle cx="210" cy="160" r="4"/>
+    <circle cx="340" cy="110" r="3"/><circle cx="470" cy="200" r="4.2"/>
+    <circle cx="610" cy="140" r="3.4"/><circle cx="760" cy="220" r="4"/>
+    <circle cx="120" cy="260" r="3"/><circle cx="250" cy="310" r="4.5"/>
+    <circle cx="390" cy="250" r="3.2"/><circle cx="520" cy="340" r="4"/>
+    <circle cx="680" cy="280" r="3.6"/><circle cx="820" cy="360" r="4.2"/>
+    <circle cx="60" cy="430" r="3"/><circle cx="200" cy="470" r="3.8"/>
+    <circle cx="330" cy="410" r="3.2"/><circle cx="480" cy="500" r="4"/>
+    <circle cx="640" cy="430" r="3.4"/><circle cx="790" cy="510" r="4.2"/>
+    <circle cx="160" cy="80" r="2.6"/><circle cx="700" cy="80" r="3"/>
+    <circle cx="840" cy="140" r="2.8"/><circle cx="860" cy="470" r="3.2"/>
+  </g>
+</svg>
