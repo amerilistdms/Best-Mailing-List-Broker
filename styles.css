@@ -229,13 +229,15 @@ body::before {
 }
 .brand:hover { opacity: 0.92; color: #fff; }
 .brand-logo {
-  height: 36px;
-  width: 36px;
+  height: 34px;
+  width: auto;
+  max-width: min(148px, 42vw);
   flex: none;
+  display: block;
   background: #fff;
-  border-radius: 8px;
-  padding: 5px;
-  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 4px 8px;
+  box-sizing: content-box;
 }
 .brand-word { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-word strong { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; white-space: nowrap; }
@@ -1335,7 +1337,12 @@ body::before {
   padding: 8px;
   margin-bottom: 10px;
 }
-.footer-logo { height: 24px; width: 24px; }
+.footer-logo {
+  display: block;
+  height: 22px;
+  width: auto;
+  max-width: 120px;
+}
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .footer-sitemap {
   width: var(--wrap);
@@ -1405,6 +1412,7 @@ body::before {
   max-width: 100%;
   margin-top: 8px;
   background: transparent;
+  overflow: hidden;
 }
 .contact-123 iframe {
   display: block;
@@ -1417,6 +1425,7 @@ body::before {
   outline: none;
   background: transparent !important;
   box-shadow: none !important;
+  filter: none !important;
 }
 .contact-form-pending code {
   font-size: 13px;

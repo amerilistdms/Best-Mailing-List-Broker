@@ -2,14 +2,23 @@
 
 #form,
 #form[style],
-#form > div[data-role="page"] {
+#form > div[data-role="page"],
+#form [data-role="page"],
+#form .form-all,
+#form .form-page {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
+  filter: none !important;
   outline: none !important;
   font-family: Inter, "Segoe UI", sans-serif !important;
   color: #1d3344 !important;
   max-width: 100% !important;
+}
+
+#form,
+#form *:not(.dropdown__options-container) {
+  box-shadow: none !important;
 }
 
 #form, #form label, #form input, #form textarea, #form select, #form button {

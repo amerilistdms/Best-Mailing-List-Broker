@@ -51,6 +51,22 @@ Sube a Vercel. El embed se carga solo en `/contact`.
 
 **No hace falta Vercel env vars** para el contacto simple si usas embed (123FB procesa el submit).
 
+### Sombra gris / botón negro en el embed (form **6980522**)
+
+El iframe carga el tema de 123FormBuilder. El sitio incluye `form-123.css` en la página, pero **123FB solo aplica CSS custom si lo configuras en el form**.
+
+1. Edita el form **6980522** → **Settings** → **Themes** (o **Form appearance**).
+2. **Desactiva la sombra del formulario** (opción tipo *Form shadow* / `page_shadow_visibility`).
+3. En **Custom CSS**, pega:
+
+   ```css
+   @import url("https://bestmailinglistbroker.com/form-123.css");
+   ```
+
+   (En preview local puedes usar la URL de tu `*.vercel.app` hasta tener el dominio en producción.)
+
+4. Guarda y republica. El fondo debe quedar transparente y el botón navy (`#12344d`).
+
 ---
 
 ## Formulario 2 — Audience Builder (quiz en homepage)
@@ -100,19 +116,14 @@ Sube a Vercel. El embed se carga solo en `/contact`.
 
 Medicare envía el quiz con **`/api/lead`** en Vercel, que hace POST a 123FB con IDs de cada campo (`medicareleads/api/lead.js`).
 
-En BMLB, **`api/lead.js` hoy es mock** (no envía nada).
+En BMLB, **`api/lead.js`** envía al form **6980525**  
+([Best Mail List Broker Quiz](https://form.123formbuilder.com/6980525/best-mail-list-broker-quiz)).
 
-**Para que el quiz te llegue por email igual que Medicare:**
+- `config.js` → `audienceBuilderFormId: "6980525"`
+- Mapa de campos en `api/lead.js` (regenerar con `node scripts/parse-123fb-fields.js` si cambias el form)
 
-1. Creas el form **698xxxx** en 123FB (arriba).
-2. Nos pasas (o anotas en 123FB → cada campo → Field ID):
-   - Form ID  
-   - Field ID + hash de cada campo (o al menos: first, last, company, email, phone, summary)
-3. En el repo se actualiza:
-   - `config.js` → `audienceBuilderFormId: "6980456"`
-   - `api/lead.js` → copia la lógica de Medicare con el mapa de campos BMLB
-
-Hasta que eso esté hecho, el quiz **muestra gracias en pantalla** pero **no dispara email** (solo log en consola).
+**Opcional en 123FB:** campo hidden **Lead source** = `BestMailingListBroker.com` (no está mapeado aún).  
+**Opcional:** campo **Roles** — si no existe, `roles` del quiz se añade al final de **Summary**.
 
 **Notifications en 123FB son obligatorias** para recibir leads del quiz una vez conectado `/api/lead`.
 
