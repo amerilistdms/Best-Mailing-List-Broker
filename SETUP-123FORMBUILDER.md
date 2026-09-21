@@ -43,7 +43,7 @@ En **`config.js`**:
 
 ```javascript
 window.FORM123 = {
-  contactFormId: "6980123",  // ← tu ID del clon, NO uses 6979839 (ese es Medicare)
+  contactFormId: "6980522",  // Best Mailing List Broker Regular form (live)
 };
 ```
 
