@@ -200,11 +200,12 @@ body::before {
 }
 
 .site-header {
+  --header-bar-h: 58px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   gap: 16px 24px;
-  padding: 14px 28px;
+  padding: 12px 28px;
   box-sizing: border-box;
   background: var(--brand-navy);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -222,6 +223,7 @@ body::before {
   display: flex;
   align-items: center;
   align-self: center;
+  min-height: var(--header-bar-h);
   gap: 10px;
   line-height: 0;
   text-decoration: none;
@@ -232,7 +234,7 @@ body::before {
 }
 .brand:hover { opacity: 0.92; color: #fff; }
 .brand-logo {
-  height: 58px;
+  height: var(--header-bar-h);
   width: auto;
   max-width: min(300px, 72vw);
   flex: none;
@@ -240,7 +242,6 @@ body::before {
   margin: 0;
   object-fit: contain;
   object-position: left center;
-  transform: translateY(3px);
 }
 .brand > .brand-word { display: none; }
 .brand-word { display: flex; flex-direction: column; line-height: 1.05; }
@@ -257,6 +258,7 @@ body::before {
   display: flex;
   align-items: center;
   align-self: center;
+  min-height: var(--header-bar-h);
   gap: 6px;
   justify-self: center;
   font-size: 14px;
@@ -359,6 +361,7 @@ body::before {
   display: flex;
   align-items: center;
   align-self: center;
+  min-height: var(--header-bar-h);
   gap: 16px;
   flex: none;
   justify-self: end;
