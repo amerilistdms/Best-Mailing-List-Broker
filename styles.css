@@ -1186,13 +1186,32 @@ body::before {
 .site-footer {
   background: var(--brand-navy);
   color: rgba(255, 255, 255, 0.72);
-  padding: 0 0 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  margin-top: 0;
+  padding: 20px 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .cta-band.surface-navy {
   border-bottom: none;
   background: var(--brand-navy);
+}
+.cta-band.surface-navy + .site-footer {
+  border-top: none;
+  padding-top: 8px;
+}
+.footer-compact {
+  width: var(--wrap);
+  margin: 0 auto 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.footer-tagline {
+  margin: 0;
+  flex: 1 1 200px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 52ch;
 }
 .footer-grid {
   display: grid;
@@ -1321,10 +1340,12 @@ body::before {
   width: var(--wrap);
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: center;
+  gap: 10px 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 12px;
   color: rgba(255, 255, 255, 0.62);
 }
@@ -1344,15 +1365,16 @@ body::before {
 }
 .footer-logo-wrap {
   display: inline-flex;
-  margin: 0 0 12px;
+  margin: 0;
   text-decoration: none;
+  flex: none;
 }
 .footer-logo-wrap:hover { opacity: 0.92; }
 .footer-logo {
   display: block;
-  height: 40px;
+  height: 32px;
   width: auto;
-  max-width: min(240px, 70vw);
+  max-width: min(200px, 55vw);
   object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
