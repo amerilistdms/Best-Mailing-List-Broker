@@ -7,15 +7,22 @@ const footer = fs.readFileSync(
   "utf8"
 ).trim();
 
-const footerRe = /<footer class="site-footer">[\s\S]*?<\/footer>/;
+const footerRe =
+  /<footer class="site-footer">[\s\S]*?<\/footer>|<div data-site-footer><\/div>/;
 
 for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".html"))) {
-  if (file === "404.html") continue;
   let html = fs.readFileSync(path.join(dir, file), "utf8");
-  if (!footerRe.test(html)) {
-    console.warn("skip (no footer):", file);
+  let next = html;
+
+  if (footerRe.test(html)) {
+    next = html.replace(footerRe, footer);
+  } else if (file !== "404.html") {
     continue;
+  } else {
+    next = html.replace("</body>", `  ${footer}\n</body>`);
   }
-  const next = html.replace(footerRe, footer);
+
+  next = next.replace(/\n\s*<script src="footer\.js"><\/script>\n?/g, "\n");
+
   if (next !== html) fs.writeFileSync(path.join(dir, file), next);
 }

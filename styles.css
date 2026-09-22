@@ -1193,10 +1193,6 @@ body::before {
   border-bottom: none;
   background: var(--brand-navy);
 }
-.cta-band.surface-navy + .site-footer {
-  border-top: none;
-  padding-top: 8px;
-}
 .footer-compact {
   width: var(--wrap);
   margin: 0 auto 14px;
