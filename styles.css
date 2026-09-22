@@ -1317,6 +1317,8 @@ body::before {
 }
 .footer-phone:hover { color: #fff; }
 .footer-legal {
+  width: var(--wrap);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 16px;
