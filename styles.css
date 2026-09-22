@@ -229,9 +229,9 @@ body::before {
 }
 .brand:hover { opacity: 0.92; color: #fff; }
 .brand-logo {
-  height: 38px;
+  height: 58px;
   width: auto;
-  max-width: min(240px, 58vw);
+  max-width: min(300px, 72vw);
   flex: none;
   display: block;
   object-fit: contain;
@@ -1334,9 +1334,9 @@ body::before {
 }
 .footer-logo {
   display: block;
-  height: 32px;
+  height: 52px;
   width: auto;
-  max-width: 200px;
+  max-width: 260px;
   object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
