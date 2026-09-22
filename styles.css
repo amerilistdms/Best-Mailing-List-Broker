@@ -1341,13 +1341,15 @@ body::before {
 }
 .footer-logo-wrap {
   display: inline-flex;
-  margin-bottom: 10px;
+  margin: 0 0 12px;
+  text-decoration: none;
 }
+.footer-logo-wrap:hover { opacity: 0.92; }
 .footer-logo {
   display: block;
-  height: 37px;
+  height: 40px;
   width: auto;
-  max-width: 220px;
+  max-width: min(240px, 70vw);
   object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
