@@ -200,7 +200,7 @@ body::before {
 }
 
 .site-header {
-  --header-bar-h: 58px;
+  --header-bar-h: 43px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
@@ -1345,9 +1345,9 @@ body::before {
 }
 .footer-logo {
   display: block;
-  height: 52px;
+  height: 37px;
   width: auto;
-  max-width: 260px;
+  max-width: 220px;
   object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
