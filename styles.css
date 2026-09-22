@@ -229,13 +229,14 @@ body::before {
 }
 .brand:hover { opacity: 0.92; color: #fff; }
 .brand-logo {
-  height: 32px;
+  height: 38px;
   width: auto;
-  max-width: min(160px, 44vw);
+  max-width: min(240px, 58vw);
   flex: none;
   display: block;
   object-fit: contain;
 }
+.brand > .brand-word { display: none; }
 .brand-word { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-word strong { font-size: 14px; font-weight: 800; letter-spacing: -0.03em; white-space: nowrap; }
 .brand-word small {
@@ -1329,16 +1330,13 @@ body::before {
 }
 .footer-logo-wrap {
   display: inline-flex;
-  background: #fff;
-  border-radius: 8px;
-  padding: 8px;
   margin-bottom: 10px;
 }
 .footer-logo {
   display: block;
-  height: 24px;
+  height: 32px;
   width: auto;
-  max-width: 140px;
+  max-width: 200px;
   object-fit: contain;
 }
 .footer-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
