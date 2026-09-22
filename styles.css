@@ -1180,18 +1180,22 @@ body::before {
   gap: 16px;
   align-items: flex-start;
 }
-.cta-side .footer-phone { margin: 0; }
+.cta-side .cta-phone { margin: 0; }
 .cta-band .powered { margin-top: 8px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.72); }
 
 .site-footer {
-  background: var(--brand-navy);
+  background: #0e2a3f;
   color: rgba(255, 255, 255, 0.72);
   padding: 20px 0 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 .cta-band.surface-navy {
-  border-bottom: none;
   background: var(--brand-navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+/* Home only: CTA band is main content, not the site footer */
+main:has(.cta-band.surface-navy) + .site-footer {
+  border-top: 3px solid rgba(255, 255, 255, 0.28);
 }
 .footer-compact {
   width: var(--wrap);
@@ -1322,6 +1326,7 @@ body::before {
 .footer-grid nav a:hover { color: #fff; transform: none; }
 .footer-sitemap a { transition: color 0.2s ease; }
 .footer-sitemap a:hover { color: #fff; }
+.cta-phone,
 .footer-phone {
   display: block;
   color: #fff;
